@@ -1,11 +1,14 @@
 {
-  "name": "tempCRA",
+  "name": "reactwebapi",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.8.4"
   },
   "dependencies": {
+    "@types/jest": "^16.0.2",
+    "@types/react": "^0.14.55",
+    "@types/react-dom": "^0.14.19",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
