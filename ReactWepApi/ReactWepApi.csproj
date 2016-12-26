@@ -268,7 +268,7 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="tsconfig.json" />
-    <None Include="Properties\PublishProfiles\File.pubxml" />
+    <Content Include="ReactWepApi.wpp.targets" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -284,7 +284,6 @@
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
     <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
   </Target>
-
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
