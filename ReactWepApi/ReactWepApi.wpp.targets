@@ -5,15 +5,14 @@
       <_CustomFiles Include="build\**\*" />
       <FilesForPackagingFromProject Include="%(_CustomFiles.Identity)">
         <DestinationRelativePath>build/%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+
       </FilesForPackagingFromProject>
+        <!-- <ExcludeFromPackageFolders Include="build\**\*.js"> -->
+        <!-- </ExcludeFromPackageFolders> -->
+
     </ItemGroup>
   </Target>
   <PropertyGroup>
-    <CopyAllFilesToSingleFolderForPackageDependsOn>
-      CustomCollectFiles;
-      $(CopyAllFilesToSingleFolderForPackageDependsOn);
-    </CopyAllFilesToSingleFolderForPackageDependsOn>
-
     <CopyAllFilesToSingleFolderForMsdeployDependsOn>
       CustomCollectFiles;
       $(CopyAllFilesToSingleFolderForPackageDependsOn);
