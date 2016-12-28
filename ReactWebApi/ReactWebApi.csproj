@@ -249,6 +249,8 @@
     <Content Include="src\App.css" />
     <TypeScriptCompile Include="src\App.tsx" />
     <TypeScriptCompile Include="src\App.test.tsx" />
+    <TypeScriptCompile Include="src\components\MyDrawer.tsx" />
+    <TypeScriptCompile Include="src\components\MyPopover.tsx" />
     <Content Include="src\index.css" />
     <TypeScriptCompile Include="src\index.tsx" />
     <Content Include="src\logo.svg" />
@@ -260,6 +262,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <TypeScriptCompile Include="src\components\Snackbar.tsx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
