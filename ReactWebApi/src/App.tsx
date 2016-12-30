@@ -5,6 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import Toggle from 'material-ui/Toggle';
+import Paper from 'material-ui/Paper'
 
 import MyDrawer from './components/MyDrawer'
 import MyPopover from './components/MyPopover'
@@ -28,17 +29,19 @@ class App extends React.Component<{}, IState> {
                         <h2>Welcome to React</h2>
                         <img src={logo} className="App-logo" alt="logo" />
                     </div>
-                    <div style={{ alignItems: 'stretch', width: '50%', height: '100%', marginRight: 'auto', marginLeft: 'auto', padding: '10px', backgroundColor: 'rgba(50%, 50%, 50%, .3)' }}>
-                        <MyDrawer />
-                        <br />
-                        <MyPopover />
-                        <br />
-                        <Snackbar />
-                        <br />
-                        <Toggle style={{ width: '50%', marginRight: 'auto', marginLeft: 'auto'}}
-                            label="Theme"
-                            onToggle={this.toggleTheme}
-                            />
+                    <div style={{ margin: 'auto', width: 400 }}>
+                        <Paper zDepth={3} style={{ margin: 25 }}>
+                            <MyDrawer />
+                            <br />
+                            <MyPopover />
+                            <br />
+                            <Snackbar />
+                            <br />
+                            <Toggle style={{ width: '50%', margin: 'auto' }}
+                                label="Theme"
+                                onToggle={this.toggleTheme}
+                                />
+                        </Paper>
                     </div>
                 </div>
             </MuiThemeProvider>

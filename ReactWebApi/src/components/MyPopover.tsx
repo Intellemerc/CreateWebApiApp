@@ -3,8 +3,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
+import Badge from 'material-ui/Badge';
 
-interface IState { open: boolean }
+interface IState { open?: boolean, anchorEl?: any }
 
 export default class MyPopover extends React.Component<{}, IState> {
 
@@ -38,7 +39,7 @@ export default class MyPopover extends React.Component<{}, IState> {
                 <RaisedButton
                     onTouchTap={this.handleTouchTap}
                     label="Click me"
-                    />
+                    /> 
                 <Popover
                     open={this.state.open}
                     anchorEl={this.state.anchorEl}
@@ -46,12 +47,13 @@ export default class MyPopover extends React.Component<{}, IState> {
                     targetOrigin={{ horizontal: 'left', vertical: 'top' }}
                     onRequestClose={this.handleRequestClose}
                     >
-                    <Menu>
-                        <MenuItem primaryText="Refresh" />
-                        <MenuItem primaryText="Help &amp; feedback" />
-                        <MenuItem primaryText="Settings" />
-                        <MenuItem primaryText="Sign out" />
-                    </Menu>
+                        <Menu>
+                            <MenuItem primaryText="Refresh" />
+                            <MenuItem primaryText="Help &amp; feedback" />
+                            <MenuItem primaryText="Settings" />
+                            <MenuItem primaryText="Sign out" />
+                        </Menu>
+                   
                 </Popover>
             </div>
         );
