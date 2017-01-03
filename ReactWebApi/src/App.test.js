@@ -1,7 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(React.createElement(App, null), div);
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+describe('when the app is rendered', () => {
+    let store;
+    const addProvider = (Cmp) => React.createElement(Provider, { store: store }, Cmp);
+    const initialState = {
+        mySimpleReducer: {
+            count: 0,
+            list: []
+        }
+    };
+    const mockReducer = (state = initialState) => state;
+    beforeEach(() => {
+        store = createStore(mockReducer);
+    });
+    it('renders without crashing', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(addProvider(React.createElement(App, null)), div);
+    });
 });

@@ -42,7 +42,7 @@ class App extends React.Component<{}, IState> {
                     </div>
                     <div style={{ margin: 'auto', width: 400 }}>
                         <Paper zDepth={3} style={{ margin: 25 }}>
-                            <MySampleComponent addItems={this.addItems} />
+                            <MySampleComponent />
                             {this.state.items}
                         </Paper>
                         <Paper zDepth={3} style={{ margin: 25 }}>

@@ -252,8 +252,10 @@
     <TypeScriptCompile Include="src\components\MyDrawer.tsx" />
     <TypeScriptCompile Include="src\components\MyPopover.tsx" />
     <Content Include="src\index.css" />
-    <TypeScriptCompile Include="src\components\MySimpleComponent.test.tsx" />
-    <TypeScriptCompile Include="src\components\MySimpleComponent.tsx" />
+    <TypeScriptCompile Include="src\components\MySimpleComponent\index.tsx" />
+    <TypeScriptCompile Include="src\components\MySimpleComponent\MySimpleComponent.test.tsx" />
+    <TypeScriptCompile Include="src\components\MySimpleComponent\MySimpleComponent.tsx" />
+    <TypeScriptCompile Include="src\components\MySimpleComponent\MySimpleReducer.tsx" />
     <TypeScriptCompile Include="src\index.tsx" />
     <Content Include="src\logo.svg" />
     <Content Include="Web.config" />
@@ -265,6 +267,8 @@
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <TypeScriptCompile Include="src\components\Snackbar.tsx" />
+    <TypeScriptCompile Include="src\rootReducer.tsx" />
+    <TypeScriptCompile Include="Types\Window.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

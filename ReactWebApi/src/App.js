@@ -38,7 +38,7 @@ class App extends React.Component {
                     React.createElement("img", { src: logo, className: "App-logo", alt: "logo" })),
                 React.createElement("div", { style: { margin: 'auto', width: 400 } },
                     React.createElement(Paper, { zDepth: 3, style: { margin: 25 } },
-                        React.createElement(MySampleComponent, { addItems: this.addItems }),
+                        React.createElement(MySampleComponent, null),
                         this.state.items),
                     React.createElement(Paper, { zDepth: 3, style: { margin: 25 } },
                         React.createElement(MyDrawer, null),
