@@ -24,7 +24,7 @@ export const SimpleComponent = ({ increment, count, list, reset }) => {
         React.createElement("h3", null, "Welcome to my Test Component"),
         "Test Component",
         React.createElement("br", null),
-        React.createElement("button", { id: "testBttn1", onClick: () => increment(count % 5 !== 0 ? 1 : 2), style: style }, "Add"),
+        React.createElement("button", { id: "testBttn1", onClick: () => increment(1), style: style }, "Add"),
         React.createElement("button", { onClick: reset, style: style }, "Reset"),
         subItems);
 };

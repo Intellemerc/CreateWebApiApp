@@ -29,7 +29,8 @@ export const SimpleComponent = ({increment, count, list, reset}) => {
         <h3>Welcome to my Test Component</h3>
         Test Component
         <br />
-        <button id="testBttn1" onClick={() => increment(count % 5 !== 0 ? 1 : 2)} style={style} >Add</button>
+
+        <button id="testBttn1" onClick={() => increment(1)} style={style} >Add</button>
         <button onClick={reset} style={style} >Reset</button>
         {subItems}
     </div>;
