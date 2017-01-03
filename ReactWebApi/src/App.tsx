@@ -10,17 +10,28 @@ import Paper from 'material-ui/Paper'
 import MyDrawer from './components/MyDrawer'
 import MyPopover from './components/MyPopover'
 import Snackbar from './components/Snackbar'
+import MySampleComponent from './components/MySimpleComponent'; 
 
-interface IState { darkTheme: boolean }
+interface IState { darkTheme?: boolean, items?: any[] }
 
+let counter = 0;
 class App extends React.Component<{}, IState> {
     constructor(props) {
         super(props);
         this.state = {
             darkTheme: true,
+            items: []
         };
     }
     toggleTheme = () => this.setState({ darkTheme: !this.state.darkTheme });
+
+    addItems = () => {
+        const newItems = [
+            ...this.state.items,
+            <div key={counter}>some new item {counter++} </div>
+        ]
+        this.setState({ items: newItems })
+    }
     render() {
         return (
             <MuiThemeProvider muiTheme={this.state.darkTheme ? getMuiTheme(darkBaseTheme) : null}>
@@ -30,6 +41,10 @@ class App extends React.Component<{}, IState> {
                         <img src={logo} className="App-logo" alt="logo" />
                     </div>
                     <div style={{ margin: 'auto', width: 400 }}>
+                        <Paper zDepth={3} style={{ margin: 25 }}>
+                            <MySampleComponent addItems={this.addItems} />
+                            {this.state.items}
+                        </Paper>
                         <Paper zDepth={3} style={{ margin: 25 }}>
                             <MyDrawer />
                             <br />

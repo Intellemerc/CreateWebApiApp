@@ -1,26 +1,29 @@
 {
   "name": "reactwebapi",
   "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "react-scripts": "0.8.4"
-  },
   "dependencies": {
-    "@types/jest": "^16.0.2",
-    "@types/material-ui": "^0.16.44",
-    "@types/react": "^0.14.55",
-    "@types/react-dom": "^0.14.19",
-    "@types/react-tap-event-plugin": "0.0.30",
-    "@types/requirejs": "^2.1.28",
     "material-ui": "^0.16.6",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-tap-event-plugin": "^2.0.1"
   },
+  "devDependencies": {
+    "@types/enzyme": "^2.5.39",
+    "@types/jest": "^16.0.3",
+    "@types/material-ui": "^0.16.44",
+    "@types/react": "^0.14.55",
+    "@types/react-dom": "^0.14.19",
+    "@types/react-tap-event-plugin": "0.0.30",
+    "@types/requirejs": "^2.1.28",
+    "enzyme": "^2.7.0",
+    "enzyme-to-json": "^1.4.5",
+    "react-scripts": "0.8.4"
+  },
+  "private": true,
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
   }
 }

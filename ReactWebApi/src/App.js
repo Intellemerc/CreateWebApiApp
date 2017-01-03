@@ -9,12 +9,25 @@ import Paper from 'material-ui/Paper';
 import MyDrawer from './components/MyDrawer';
 import MyPopover from './components/MyPopover';
 import Snackbar from './components/Snackbar';
+import MySampleComponent from './components/MySimpleComponent';
+let counter = 0;
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.toggleTheme = () => this.setState({ darkTheme: !this.state.darkTheme });
+        this.addItems = () => {
+            const newItems = [
+                ...this.state.items,
+                React.createElement("div", { key: counter },
+                    "some new item ",
+                    counter++,
+                    " ")
+            ];
+            this.setState({ items: newItems });
+        };
         this.state = {
             darkTheme: true,
+            items: []
         };
     }
     render() {
@@ -24,6 +37,9 @@ class App extends React.Component {
                     React.createElement("h2", null, "Welcome to React"),
                     React.createElement("img", { src: logo, className: "App-logo", alt: "logo" })),
                 React.createElement("div", { style: { margin: 'auto', width: 400 } },
+                    React.createElement(Paper, { zDepth: 3, style: { margin: 25 } },
+                        React.createElement(MySampleComponent, { addItems: this.addItems }),
+                        this.state.items),
                     React.createElement(Paper, { zDepth: 3, style: { margin: 25 } },
                         React.createElement(MyDrawer, null),
                         React.createElement("br", null),
