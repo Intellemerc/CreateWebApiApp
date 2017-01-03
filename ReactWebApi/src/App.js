@@ -7,10 +7,7 @@ class App extends React.Component {
             React.createElement("div", { className: "App-header" },
                 React.createElement("h2", null, "Welcome to React"),
                 React.createElement("img", { src: logo, className: "App-logo", alt: "logo" })),
-            React.createElement("p", { className: "App-intro" },
-                "Edit ",
-                React.createElement("code", null, "src/App.js"),
-                " and save to reload.")));
+            React.createElement("p", { className: "App-intro" }, "Code from the 2.HookupToBuild Branch")));
     }
 }
 export default App;

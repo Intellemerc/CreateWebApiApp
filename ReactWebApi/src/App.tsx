@@ -11,7 +11,7 @@ class App extends React.Component<{}, {}> {
                     <img src={logo} className="App-logo" alt="logo" />
                 </div>
                 <p className="App-intro">
-                   Edit <code>src/App.js</code> and save to reload.
+                   Code from the 2.HookupToBuild Branch
                 </p>
             </div>
 
