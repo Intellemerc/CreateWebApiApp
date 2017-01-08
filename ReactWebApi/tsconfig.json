@@ -5,12 +5,13 @@
     "jsx": "react",
     "moduleResolution": "node",
     "target": "es6",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "compileOnSave": true,
   "exclude": [ "config", "dev_server.js", "dist", "node_modules" ],
 
-  "typeRoots": [ 
-    "node_modules/@types"
-  ]
+  
 }
