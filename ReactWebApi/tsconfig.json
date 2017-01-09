@@ -11,7 +11,7 @@
     ]
   },
   "compileOnSave": true,
-  "exclude": [ "config", "dev_server.js", "dist", "node_modules" ],
+  "exclude": [ "config", "dev_server.js", "dist", "node_modules" ]
 
   
 }
