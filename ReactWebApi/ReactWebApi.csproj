@@ -252,7 +252,9 @@
     <Content Include="src\index.css" />
     <TypeScriptCompile Include="src\index.tsx" />
     <Content Include="src\logo.svg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -269,7 +271,7 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="tsconfig.json" />
-    <Content Include="ReactWepApi.wpp.targets">
+    <Content Include="ReactWebApi.wpp.targets">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
